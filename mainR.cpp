@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <map>
+#include <string>
 template <class T>
 class i_am_class{
 public:
@@ -22,6 +25,15 @@ i_am_class<int>().f();
 }
 
 int main(){
+std::vector<int> foo;
+{
+//std::vector<int> tris;
+}
 
+
+std::map<std::vector<int>,std::string> tumen_soft {{foo, "test"}};
+
+
+std::vector<int> v;
 f();
 }

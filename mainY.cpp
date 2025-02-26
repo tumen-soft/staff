@@ -18,12 +18,12 @@ RI rx = x;
 std::cout<<rx<<std::endl;
 int *c[]={&rx};
 //c.push_back(rx);
-std::cout<<c[0]<<std::endl;
+std::cout<<*(c[0])<<std::endl;
 x = 2;
 std::cout<<rx<<std::endl;
 //std::vector<int> c;
 //c.push_back(rx);
-std::cout<<c[0]<<std::endl;
+std::cout<<*(c[0])<<std::endl;
 
 
 }

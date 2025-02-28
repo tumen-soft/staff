@@ -34,4 +34,6 @@ Pro p;
 std::vector<Team> t;
 t.push_back({3});
 
+std::cout<<t[0].x<<std::endl;
+
 }

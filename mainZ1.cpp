@@ -1,14 +1,18 @@
 #include <iostream>
+#include <set>
+#include <string>
 struct Test{
 int* i;
 
 };
 int main(){
-Test t1;
-t1.i=new int(1);
-Test t2 = t1;
-*t2.i=3;
-std::cout << *t1.i << std::endl;
+std::set<Test*> m;
+//Test t=Test();
+m.insert(new Test({new int(1)}));
+//m.begin().i=new int(1);
+//Test t2 = t1;
+//*t2.i=3;
+for(auto& e : m)std::cout << *e->i << std::endl;
 
 
 }

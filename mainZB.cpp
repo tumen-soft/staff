@@ -62,6 +62,12 @@ head->next=new node();
 head->next->data='B';
 head->next->next=new node();
 head->next->next->data='C';
+head->next->next->next=new node();
+head->next->next->next->data='D';
+head->next->next->next->next=new node();
+head->next->next->next->next->data='E';
+head->next->next=next->next->next=new node();
+head->next->next->next->next->next->data='F';
 
 
 printlist();

@@ -1,0 +1,47 @@
+
+function игры {
+f=(dfort_ nwn factorio soft learn PotionCraft SubmashineLegacy civilization highfleet warcraft valheim crafttheworld)
+#f=$(cat 1.txt)
+declare -i i=0;
+declare -i j=0;
+declare -i I=0;
+g=(A B C D E F G H I J K L)
+for num in {1..100000};
+do
+i=0;
+clear;
+echo -e '\e[1;97;40m' Доступные игры: '\e[0m';
+for s in ${f[*]}; 
+do
+if [ $i == $j ];
+then 
+echo -e '\e[1;30;42m' ${g[$i]} '\e[0m' '\e[1;30;42m'$s'\e[0m' ;
+else
+echo -e '\e[1;30;42m' ${g[$i]} '\e[0m' $s;
+fi
+i=i+1
+done
+read -sN1 
+    #echo "${REPLY}";
+    case "${REPLY}" in
+      A) j=j-1;i=0;;
+      B) j=j+1;i=0;;
+      " ")
+I=0;
+for h in ${f[*]}; 
+do
+if [ $((I - j)) == 0 ];
+then 
+
+offline $h 
+
+fi
+I=I+1
+done
+    ;;
+  esac
+done
+}
+export -f игры
+
+

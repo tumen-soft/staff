@@ -1,0 +1,72 @@
+function поиск {
+#10-строчный цветной графический консольный интерфейс для google search
+clear;
+echo -e '\e[1;31;102m' введите запрос: '\e[0m';
+query=$@
+if [ $@ == "" ];
+then
+read query;
+fi
+
+google $query --stop=10 > .result &
+BACK_PID=$!
+while kill -0 $BACK_PID ; do
+i=1
+sp="/-\|"
+echo -n ' '
+while sleep 0.01 && kill -0 $BACK_PID 
+do
+    printf "\b${sp:i++%${#sp}:1}"
+done
+done
+
+
+
+
+
+f=$(cat .result)
+
+
+declare -i i=0;
+declare -i j=0;
+declare -i I=0;
+g=(A B C D E F G H I J K L)
+for num in {1..100000};
+do
+i=0;
+clear;
+echo -e '\e[1;97;40m' Результаты поиска: '\e[0m';
+for s in $f; 
+do
+if [ $i == $j ];
+then 
+echo -e '\e[1;31;102m'  ${g[$i]} '\e[0m' '\e[1;31;102m'$s'\e[0m' ;
+else
+echo -e '\e[1;31;102m'  ${g[$i]} '\e[0m' $s '\e[0m';
+fi
+i=i+1
+done
+read -sN1 
+    #echo "${REPLY}";
+    case "${REPLY}" in
+      A) j=j-1;i=0;;
+      B) j=j+1;i=0;;
+      " ")
+I=0;
+for h in $f; 
+do
+if [ $((I - j)) == 0 ];
+then 
+browser $h 2>/dev/null 1>/dev/null  &
+fi
+I=I+1
+done
+    ;;
+  esac
+done
+
+}
+export -f поиск
+
+
+

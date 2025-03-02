@@ -66,7 +66,7 @@ head->next->next->next=new node();
 head->next->next->next->data='D';
 head->next->next->next->next=new node();
 head->next->next->next->next->data='E';
-head->next->next=next->next->next=new node();
+head->next->next->next->next->next=new node();
 head->next->next->next->next->next->data='F';
 
 

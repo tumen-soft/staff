@@ -2,7 +2,7 @@
 #include <string.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
-
+#include <unistd.h>
 struct Point {
   int x, y;
   Point(int a, int b) { this->x = a; this->y = b; }
@@ -86,7 +86,8 @@ typedef struct {
 
 
 	
-// for(;;)   
+ for(;;){ 
+sleep(0.1) ; 
 	for (int x=0;x<1200;x=x+210)
 	for (int y=0;y<800;y=y+65){
     XDrawLine(dpy, root, gc, 150+x, 100+y, 250+x, 130+y);
@@ -95,8 +96,8 @@ typedef struct {
     XDrawLine(dpy, root, gc, 60+x, 130+y, 150+x, 100+y);
     //std::string str("OK");
     //XDrawString (dpy, root, gc, 144, 115,  str.c_str(), 2);
-}
 
+}}
 
 
 

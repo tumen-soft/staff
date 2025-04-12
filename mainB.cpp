@@ -82,7 +82,7 @@ typedef struct {
 	*/
 	}
     
-        XSetForeground (dpy, gc, _RGB(0, 0, 0));
+        XSetForeground (dpy, gc, _RGB(0, 0, 255));
 
 
 	

@@ -90,13 +90,14 @@ typedef struct {
 sleep(0.1) ; 
 	for (int x=0;x<1100;x=x+190)
 	for (int y=0;y<800;y=y+50){
-    XDrawLine(dpy, root, gc, 150+x, 100+y, 250+x, 130+y);
-    XDrawLine(dpy, root, gc, 250+x, 130+y, 150+x, 150+y);
-    XDrawLine(dpy, root, gc, 150+x, 150+y, 60+x, 130+y);
-    XDrawLine(dpy, root, gc, 60+x, 130+y, 150+x, 100+y);
+    for(int i=0;i<3;i++){
+    XDrawLine(dpy, root, gc, 150+x+i, 100+y+i, 250+x+i, 130+y+i);
+    XDrawLine(dpy, root, gc, 250+x+i, 130+y+i, 150+x+i, 150+y+i);
+    XDrawLine(dpy, root, gc, 150+x+i, 150+y+i, 60+x+i, 130+y+i);
+    XDrawLine(dpy, root, gc, 60+x+i, 130+y+i, 150+x+i, 100+y+i);
     //std::string str("OK");
     //XDrawString (dpy, root, gc, 144, 115,  str.c_str(), 2);
-
+}
 }}
 
 

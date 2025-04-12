@@ -82,12 +82,24 @@ typedef struct {
 	*/
 	}
     
-        XSetForeground (dpy, gc, _RGB(0, 0, 255));
+        //XSetForeground (dpy, gc, _RGB(0, 0, 255));
 
 
-	
+int j=0,k=0;	
+bool trig=false;
  for(;;){ 
-sleep(0.1) ; 
+
+if(k>50){
+if (trig)j--;else j++;
+if((j>254)||(j<1)){if(trig)trig=false;else trig=true;}
+k=0;
+}
+
+k++;
+
+ XSetForeground (dpy, gc, _RGB(0, 0, j));
+
+sleep(0.7) ; 
 	for (int x=0;x<1100;x=x+190)
 	for (int y=0;y<800;y=y+50){
     for(int i=0;i<3;i++){
@@ -98,6 +110,7 @@ sleep(0.1) ;
     //std::string str("OK");
     //XDrawString (dpy, root, gc, 144, 115,  str.c_str(), 2);
 }
+
 }}
 
 

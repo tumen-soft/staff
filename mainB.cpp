@@ -88,8 +88,8 @@ typedef struct {
 	
  for(;;){ 
 sleep(0.1) ; 
-	for (int x=0;x<1200;x=x+210)
-	for (int y=0;y<800;y=y+65){
+	for (int x=0;x<1100;x=x+190)
+	for (int y=0;y<800;y=y+50){
     XDrawLine(dpy, root, gc, 150+x, 100+y, 250+x, 130+y);
     XDrawLine(dpy, root, gc, 250+x, 130+y, 150+x, 150+y);
     XDrawLine(dpy, root, gc, 150+x, 150+y, 60+x, 130+y);

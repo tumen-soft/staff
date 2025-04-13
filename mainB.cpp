@@ -3,6 +3,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <unistd.h>
+#include "mainB.conf"
 struct Point {
   int x, y;
   Point(int a, int b) { this->x = a; this->y = b; }
@@ -89,7 +90,7 @@ int j=0,k=0;
 bool trig=false;
  for(;;){ 
 
-if(k>50){
+if(k>WEIDTH){
 if (trig)j--;else j++;
 if((j>254)||(j<1)){if(trig)trig=false;else trig=true;}
 k=0;

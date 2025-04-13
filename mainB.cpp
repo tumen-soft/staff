@@ -98,7 +98,11 @@ k=0;
 
 k++;
 
- XSetForeground (dpy, gc, _RGB(0, 0, j));
+if(RED) XSetForeground (dpy, gc, _RGB(j, 0, 0));
+if(YELLOW) XSetForeground (dpy, gc, _RGB(0, j, 0));
+if(BLUE) XSetForeground (dpy, gc, _RGB(0, 0, j));
+
+
 
 sleep(0.7) ; 
 	for (int x=0;x<1100;x=x+190)

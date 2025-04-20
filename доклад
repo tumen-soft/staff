@@ -17,20 +17,11 @@ F demloyment & maintenace       развертывание release planning feed
 
 
 
+подзадача планирование решена, разбита на подзадачи для которых решение очевидно: 
+A:преобразовать исзодный код расширения в змеинную нотацию.
+snake echo camelCase andAnother | sed 's/[A-Z]/_\l&/g'
+B:срок неделя(27.04.2025).
+C:чтоб все работало.
 
 
-feature         status            target        prio
-----------------------------------------------------------
-*		planing       0.59.0          low
-*	        planing         0....           medium
-*	        planing         0....           high +
-*               defining        0.59.0          hugh
-snake_conv      planung         0.58.1          medium
-
-
-snake_conversion feature
-
-A: преюбразовать исзодный код расширения в змеинную нотацию. 
-срок неделя. 
-чтоб все работало.
 

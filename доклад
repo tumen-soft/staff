@@ -2,6 +2,23 @@
 ------------------------------------------------------------------------------
 новое:
 Вергун Д.Н.
+
+как правило проекты разбиваются на следующие классы подзадач:
+
+
+A planing                       анализ требований    
+B defining              определение требований       
+C design                        проектирование архитектуры
+D development           разработка проекта coding standart version controli  code review
+E system testing                тестипрвание    manual  automated
+F demloyment & maintenace       развертывание release planning feedback
+
+
+
+
+
+
+
 feature         status            target        prio
 ----------------------------------------------------------
 *		planing       0.59.0          low

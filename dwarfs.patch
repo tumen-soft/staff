@@ -1,0 +1,20 @@
+diff --git a/thrift/lib/cpp2/protocol/DebugProtocol.cpp b/thrift/lib/cpp2/protocol/DebugProtocol.cpp
+index f7fae4d58d..40c9ad9e7f 100644
+--- a/thrift/lib/cpp2/protocol/DebugProtocol.cpp
++++ b/thrift/lib/cpp2/protocol/DebugProtocol.cpp
+@@ -322,13 +322,13 @@ uint32_t DebugProtocolWriter::writeBinary(folly::ByteRange v) {
+ uint32_t DebugProtocolWriter::writeBinary(
+     const std::unique_ptr<folly::IOBuf>& str) {
+   if (str) {
+-    writeByteRange(folly::ByteRange(str->clone()->coalesce()));
++    //writeByteRange(folly::ByteRange(str->clone()->coalesce()));
+   }
+   return 0;
+ }
+ 
+ uint32_t DebugProtocolWriter::writeBinary(const folly::IOBuf& str) {
+-  writeByteRange(folly::ByteRange(str.clone()->coalesce()));
++  //writeByteRange(folly::ByteRange(str.clone()->coalesce()));
+   return 0;
+ }
+ 
